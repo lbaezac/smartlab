@@ -5,6 +5,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+/*Encabezado */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -25,11 +27,22 @@ header {
     gap: 5rem;
 }
 
+.navbar li:hover {
+    /*color: #253B6E;*/
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
 .navbar li a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
 }
+
+input:focus {
+    background-color: #90ebff;
+}
+
+/* Banner */
 
 .section-principal {
     background-image: url(../asset/img/banner.jpeg);
@@ -63,10 +76,20 @@ header {
     padding: 3rem 8rem 3rem;
 }
 
+.contenedor-nosotros {
+    display: flex;
+    flex-direction: row;
+}
+
 .section-nosotros-int {
     background-position: 50% 100%;
     height: auto;
     padding: 3rem 8rem 3rem;
+
+}
+
+.foto-perfil {
+    width: 200px;
 }
 
 .linkedin {
@@ -151,12 +174,22 @@ header {
 
 }
 
+.mapa-google {
+    width: 600px;
+    height: 450px;
+}
+
 .formulario-contacto {
-    display: flexbox;
     background-color: rgba(31, 95, 139, 0.25);
     width: 650px;
     padding: 2rem 2rem 2rem;
     margin: 2rem;
+}
+
+.campos-form {
+    padding: 2.8125rem;
+    width: 600px;
+    border: none;
 }
 
 .pie {
@@ -184,4 +217,159 @@ header {
     color: white;
     font-size: 12px;
     height: 2rem;
+}
+
+
+.controls {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: none;
+    font-size: 14px;
+    color: white;
+}
+
+
+.formulario-contacto .boton {
+    width: 100%;
+    background: #253B6E;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+/***** Resolución bajo 768 px *****/
+
+/* Header */
+@media(max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 3rem;
+    }
+
+    /* Principal */
+
+    .section-principal {
+        height: 850px;
+        background-image: url(../asset/img/banner.jpeg);
+        background-size: cover;
+        background-position: 75%;
+        padding: 31rem 0rem 0.125rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .capsula-banner {
+        background-color: rgba(24, 145, 172, .3);
+        width: 550px;
+        padding: 2rem 2rem 2rem;
+        margin: 8rem;
+    }
+
+
+
+    /* Nosotros */
+
+    .title-nosotros {
+        font-size: 4rem;
+        text-align: center;
+        color: #253B6E;
+        padding: 0px;
+    }
+
+    .contenedor-nosotros {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-nosotros-int {
+        height: auto;
+        padding: 3rem 8rem 3rem;
+    }
+
+    /* Servicios */
+
+    .title-servicios {
+        font-size: 4rem;
+        text-align: center;
+        color: #253B6E;
+        padding: 0px;
+    }
+
+    /* Clientes */
+
+    .title-clientes {
+        font-size: 4rem;
+        text-align: center;
+        color: #253B6E;
+        padding: 0px;
+    }
+
+    .section-clientes {
+        height: auto;
+        padding: 3rem 8rem 0.125rem;
+        text-align: center;
+    }
+
+    .logos-clientes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        align-content: center;
+        width: 100%;
+        height: 5%;
+    }
+
+    /* Contacto */
+
+    .title-contacto {
+        font-size: 4rem;
+        text-align: center;
+        color: #253B6E;
+        padding: 0px;
+    }
+
+    .contacto-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa-ubicacion {
+        width: 450px;
+        padding: 2rem 2rem 2rem;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .mapa-google {
+        width: 400px;
+        height: 450px;
+    }
+
+    .formulario-contacto {
+        width: 450px;
+        padding: 2rem 2rem 2rem;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .campos-form {
+        padding: 2.8125rem;
+        width: 400px;
+        border: none;
+    }
 }
